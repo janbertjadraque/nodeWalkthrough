@@ -1,0 +1,6 @@
+Basically this is just an excercise with routes to
+/ basically the front page with a form for the user name input
+when user clicks the submit a user name is stored in the server via POST request to createUser route
+/users list all the users stored in the server so far.
+
+This storage of the users is temporary only and restarting of the server erases this list.s
