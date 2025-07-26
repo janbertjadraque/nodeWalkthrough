@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Product Page</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/admin/createProduct">Create Product</a></li>
+          <li><a href="/">Shop</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="/admin/createProduct" method="POST">
+        <input type="text" name="productName" />
+        <button type="submit">Add Product</button>
+      </form>
+    </main>
+  </body>
+</html>

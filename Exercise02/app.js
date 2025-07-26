@@ -1,19 +1,19 @@
 const express = require("express");
 
-const router = require("./routes/admin");
+const admin = require("./routes/admin");
+const shop = require("./routes/shop");
 
 const app = express();
+const bodyParser = require("body-parser");
 
-app.use("/", (req, res, next) => {
-  console.log("This always runs");
-  next();
-});
+app.use(bodyParser.urlencoded());
+//app.use(bodyParser.json());
 
-app.use(router);
+app.use("/admin", admin);
+app.use(shop);
 
-app.use("/", (req, res, next) => {
-  console.log("This is the last middleware");
-  res.send("<h1>Hello this is the last middleware</h1>");
+app.use((req, resp, next) => {
+  resp.status(404).send("<h1>404 Page Not Found</h1>");
 });
 
 app.listen(3000);
