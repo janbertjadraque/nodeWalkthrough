@@ -1,0 +1,5 @@
+We added nodemon local dependency via npm install.
+checked the custom script in package json to use nodemon instead of node.
+
+Installing nodemon locally installs node_modules folder. we can add this folder in the gitignore because this folder is not needed for sharing.
+When copying this project and to run it first you need to execute npm install to have node_modules from npm repository.
